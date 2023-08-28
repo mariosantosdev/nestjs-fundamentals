@@ -3,6 +3,8 @@ import { ConfigService } from '@nestjs/config'
 import { JwtModule } from '@nestjs/jwt'
 import { PassportModule } from '@nestjs/passport'
 import { Env } from 'src/env'
+import { CreateSessionController } from './create-session/create-session.controller'
+import { CreateSessionService } from './create-session/create-session.service'
 
 @Module({
   imports: [
@@ -22,7 +24,7 @@ import { Env } from 'src/env'
       },
     }),
   ],
-  controllers: [],
-  providers: [],
+  controllers: [CreateSessionController],
+  providers: [CreateSessionService],
 })
 export class AuthModule {}
