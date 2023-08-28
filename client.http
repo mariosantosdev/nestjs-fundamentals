@@ -31,6 +31,13 @@ Authorization: Bearer {{accessToken}}
 
 {
   "title": "Teste title",
-  "slug": "123456",
+  "slug": "teste-title",
   "content": "TESTE"
 }
+
+###
+
+# @name fetch_questions
+GET {{baseUrl}}/questions?page=1
+Content-Type: application/json
+Authorization: Bearer {{accessToken}}
