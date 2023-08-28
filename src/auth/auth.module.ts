@@ -5,6 +5,7 @@ import { PassportModule } from '@nestjs/passport'
 import { Env } from 'src/env'
 import { CreateSessionController } from './create-session/create-session.controller'
 import { CreateSessionService } from './create-session/create-session.service'
+import { JwtStrategy } from './jwt.strategy'
 
 @Module({
   imports: [
@@ -25,6 +26,6 @@ import { CreateSessionService } from './create-session/create-session.service'
     }),
   ],
   controllers: [CreateSessionController],
-  providers: [CreateSessionService],
+  providers: [CreateSessionService, JwtStrategy],
 })
 export class AuthModule {}
